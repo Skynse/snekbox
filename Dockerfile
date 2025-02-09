@@ -1,5 +1,5 @@
 # Use official Python base image directly
-FROM python:3.13-slim-bookworm as base
+FROM python:3.12-slim-bookworm as base
 
 ENV PIP_DISABLE_PIP_VERSION_CHECK=1 \
     PIP_NO_CACHE_DIR=false
