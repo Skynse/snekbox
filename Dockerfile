@@ -34,14 +34,14 @@ RUN git clone -b v2.4.23 --depth 1 https://github.com/pyenv/pyenv.git $PYENV_ROO
 COPY --link scripts/build_python.sh /
 
 # ------------------------------------------------------------------------------
-#FROM builder-py-base as builder-py-3_12
-#RUN /build_python.sh 3.12.8
+FROM builder-py-base as builder-py-3_12
+RUN /build_python.sh 3.12.8
 # ------------------------------------------------------------------------------
-#FROM builder-py-base as builder-py-3_13
-#RUN /build_python.sh 3.13.1
+FROM builder-py-base as builder-py-3_13
+RUN /build_python.sh 3.13.1
 # ------------------------------------------------------------------------------
-#FROM builder-py-base as builder-py-3_13t
-#RUN /build_python.sh 3.13.1t
+FROM builder-py-base as builder-py-3_13t
+RUN /build_python.sh 3.13.1t
 # ------------------------------------------------------------------------------
 FROM python:3.13-slim-bookworm as base
 
